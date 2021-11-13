@@ -1399,81 +1399,7 @@ const sells = `[
         "state": true,
         "abono": 0,
         "customer": "",
-        "date_at": 1634831956709
-    },
-    {
-        "id": "58ae50b0-89fa-4e67-826e-e7a4677c339d",
-        "products": [
-            {
-                "id": "56029ddf-a391-4571-8159-85e581e2b8b5",
-                "name": "Queso",
-                "messure": "Kg",
-                "category": "Nevera",
-                "cost": 0,
-                "quantity": 49.5,
-                "price": 3.8202,
-                "barcode": "",
-                "inputQuantity": 0,
-                "cartQuantity": 0.5,
-                "priority": 1
-            },
-            {
-                "id": "0af057b0-51c1-45e3-ba53-29c2773b9f39",
-                "name": "Aceite Coamo 900ml",
-                "messure": "",
-                "category": "Víveres",
-                "cost": 0,
-                "quantity": 15,
-                "price": 2.4045,
-                "barcode": "",
-                "inputQuantity": 0,
-                "priority": 1,
-                "cartQuantity": 15
-            },
-            {
-                "id": "d8029c6d-2b28-49fb-bed6-d289b622d933",
-                "name": "Harina Doña María (Trigo Leudante)",
-                "messure": "",
-                "category": "Víveres",
-                "cost": 0,
-                "quantity": 30,
-                "price": 1.2135,
-                "barcode": "",
-                "inputQuantity": 0,
-                "cartQuantity": 1,
-                "priority": 1
-            }
-        ],
-        "note": "",
-        "total": 39.1911,
-        "type": "credit",
-        "state": false,
-        "abono": 0,
-        "customer": "Orlando Briceño",
-        "date_at": 1634832366716
-    },
-    {
-        "id": "1130d833-7cb6-4949-b26c-ed8cbb3a57b4",
-        "products": [
-            {
-                "id": "ec7af6ff-bc49-4e68-9694-fbafc045f663",
-                "name": "1/2 Cartón Huevos",
-                "messure": "",
-                "category": "Víveres",
-                "cost": 0,
-                "quantity": 30,
-                "price": 2.7083,
-                "barcode": "",
-                "cartQuantity": 1
-            }
-        ],
-        "note": "Abonó $1",
-        "total": 2.7083,
-        "type": "credit",
-        "state": false,
-        "abono": 1,
-        "customer": "Orlando Briceño",
-        "date_at": 1635962780497
+        "date_at": ${Date.now()}
     },
     {
         "id": "105b2efe-0ec3-4b19-a222-0cedcf9bd56d",
@@ -1509,7 +1435,7 @@ const sells = `[
         "state": true,
         "abono": 0,
         "customer": "",
-        "date_at": 1636159192870
+        "date_at": ${Date.now()}
     },
     {
         "id": "efd33766-828b-4e9c-9d97-6f11562eee69",
@@ -1566,39 +1492,9 @@ const sells = `[
         "abono": 0,
         "customer": "",
         "date_at": 1636665474056
-    },
-    {
-        "id": "bfe804ad-eb8a-49e7-9f62-b4ba895b7057",
-        "products": [
-            {
-                "id": "8716fc64-0f3a-4cb6-aba1-92bd06061579",
-                "name": "Aguacate",
-                "messure": "Kg",
-                "category": "Verduras",
-                "cost": 0,
-                "quantity": 48,
-                "price": 0.7561,
-                "barcode": "",
-                "formula": {
-                    "id": ""
-                },
-                "ingredients": [],
-                "inputQuantity": 0,
-                "cartQuantity": 1,
-                "priority": 0
-            }
-        ],
-        "note": "nota",
-        "total": 0.7561,
-        "type": "credit",
-        "state": false,
-        "abono": 0,
-        "customer": "",
-        "date_at": 1636665480587
     }
 ]`
 
-window.sessionStorage.setItem('categories', JSON.stringify(categories))
-window.sessionStorage.setItem('products', JSON.stringify(products))
-window.sessionStorage.setItem('sells', JSON.stringify(sells))
-
+window.sessionStorage.setItem('categories', JSON.parse(JSON.stringify(categories)))
+window.sessionStorage.setItem('products', JSON.parse(JSON.stringify(products)))
+window.sessionStorage.setItem('sells', JSON.parse(JSON.stringify(sells)))
