@@ -1,4 +1,8 @@
-*, *::before, *::after { box-sizing: border-box }
+*, *::before, *::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent
+}
 *:focus { outline: none!important }
 
 @font-face {
@@ -13,4 +17,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-html { font-size: 14px }
+html {
+  font-size: 14px;
+  box-sizing: border-box
+}
